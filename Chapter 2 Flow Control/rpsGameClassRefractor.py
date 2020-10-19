@@ -1,5 +1,5 @@
 import random , sys
-print("ROCK , PAPER , SCISSORS")
+
 #These variables keep track of the number of wins ,losses and ties.
 class RPSGame:
     def __init__(self,wins = 0 , losses =0 , ties=0):
@@ -75,6 +75,7 @@ class RPSGame:
             self.losses = self.losses + 1        
 
 if __name__ == "__main__":
+    print("ROCK , PAPER , SCISSORS")
     RPSgame = RPSGame()
     RPSgame.run_game()
 
