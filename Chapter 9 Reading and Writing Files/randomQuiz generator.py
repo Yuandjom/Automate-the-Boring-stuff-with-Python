@@ -1,9 +1,7 @@
 # python 3
 #randomQuizgenerator.py Create quizzes with questions and answers in 
 #random order , along with the answer key .
-
 import random 
-
 #The quiz data . Keys are states and values are their capitals.
 capitals = {
     'Alabama': 'Montgomery',
@@ -64,6 +62,9 @@ for quizNum in range(35):
     quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
     quizFile.write((' '*20) + f'State Captials Quiz (Form{quizNum+1})') #leave a lot of spacing 
     quizFile.write('\n\n')
+    
     #Shuffle the order of the states.
     states = list(capitals.keys()) #need to list() if not they will be in tuple page 115
+    random.shuffle(states)
+
     #TODO: Loop through all 50 states , making a question for each 
