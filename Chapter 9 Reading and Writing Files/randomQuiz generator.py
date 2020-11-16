@@ -70,9 +70,13 @@ for quizNum in range(35):
     #TODO: Loop through all 50 states , making a question for each 
     for questionNum in range(50):
         #Get right and wrong answers.
-        correctAnswer = capitals[states[questionNum]]
+        correctAnswer = capitals[states[questionNum]] #insert dict[key] to get output variable as value 
         wrongAnswers = list(capitals.values())
-        del wrongAnswers[wrongAnswers.index(correctAnswer)]
-        wrongAnswers = random.sample(wrongAnswers, 3)
-        answerOptions = wrongAnswers + [correctAnswer]
-        random.shuffle(answerOptions)
+        del wrongAnswers[wrongAnswers.index(correctAnswer)] # delete the correct answer from index
+        wrongAnswers = random.sample(wrongAnswers, 3) #get 3 random answers
+        answerOptions = wrongAnswers + [correctAnswer] #add to the list correctAnswer
+        random.shuffle(answerOptions) #shuffle the list
+
+     #TODO : Write the question and answer options to the quiz file.
+        
+     #TODO : Write the answer key to a file 
